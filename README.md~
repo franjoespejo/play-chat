@@ -1,5 +1,3 @@
-SignalJ Java Chat Activator Tutorial
+Java webocket chat POC
 ===================================
 
-Please see the [SignalJ](http://signalj.io) website
-# play-chat

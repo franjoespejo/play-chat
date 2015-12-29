@@ -1,3 +1,3 @@
-Java webocket chat POC
+Java Websocket chat POC
 ===================================
 
