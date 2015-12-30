@@ -28,21 +28,7 @@ $(function() {
         });
     };
 
-   /* hub.client.roomList = function(rooms) {
-        var room = '';
-        if(changeRoom == '') {
-            var optionSelected = $('#roomselect').find("option:selected");
-            room = optionSelected.text();
-        } else {
-            room = changeRoom;
-            changeRoom = '';
-        }
-        $('#roomselect').find('option').remove().end();
-        $.each(rooms, function( index, value ) {
-            $('#roomselect').append(new Option(value, value));
-        });
-        $('#roomselect').val(room);
-    }; */
+ 
 
     hub.client.userLeftRoom = function(username) {
         var el = $('<div class="message"><span></span><p></p></div>');

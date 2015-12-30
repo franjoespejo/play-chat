@@ -15,6 +15,7 @@ public class ChatHub extends Hub<ChatPage> {
     private final static Map<String, Set<String>> users = new HashMap<>();
     private final static Map<UUID, String> connectionsToUsernames = new HashMap<>();
     private static ActorRef robot;
+    private static boolean auth=false;
 
     public boolean login(String username) {
     	if(username.equals("invitado")){
@@ -22,6 +23,7 @@ public class ChatHub extends Hub<ChatPage> {
            System.out.println(context().connectionId);
            username=context().connectionId.toString();
            clients().callerState.put("username", username);
+           
            joinRoom("Room1");
            joinRoom("Room2");
            clients().caller.roomList(getRoomList());
@@ -30,7 +32,7 @@ public class ChatHub extends Hub<ChatPage> {
     		return true;
     	}else{
         if(connectionsToUsernames.containsValue(username) || username.equals("Robot")) return false;
-       
+        auth=true;
         clients().callerState.put("username", username);
         joinRoom("Room1");
         joinRoom("Room2");
@@ -45,6 +47,7 @@ public class ChatHub extends Hub<ChatPage> {
         connectionsToUsernames.remove(context().connectionId);
         removeUserFromRoom(clients().callerState.get("username"));
         clients().callerState.put("username", "");
+        auth=false;
     }
 
     public void joinRoom(String room) {
@@ -59,7 +62,11 @@ public class ChatHub extends Hub<ChatPage> {
     }
 
     public void sendMessage(String room, String message) {
-        clients().othersInGroup(room).sendMessage(clients().callerState.get("username"), message);
+    	if(!auth && room.equals("Room1")){
+    		
+    	}else{
+    		clients().othersInGroup(room).sendMessage(clients().callerState.get("username"), message);
+    	}
     }
 
     private void joinRoom(String room, boolean fromCreate) {
@@ -118,7 +125,7 @@ public class ChatHub extends Hub<ChatPage> {
 
     @Override
     public void onConnected() {
-        if(robot == null) {
+        /*if(robot == null) {
             robot = Akka.system().actorOf(Props.create(Robot.class), "robot");
             Akka.system().scheduler().schedule(
                     Duration.create(5, TimeUnit.SECONDS),
@@ -128,6 +135,6 @@ public class ChatHub extends Hub<ChatPage> {
                     Akka.system().dispatcher(),
                     ActorRef.noSender()
             );
-        }
+        }*/
     }
 }
