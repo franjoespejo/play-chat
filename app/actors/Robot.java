@@ -9,6 +9,7 @@ import signalJ.services.HubContext;
 
 public class Robot extends AbstractActor {
     public Robot() {
+    	//here the code that the Robot runs- disabled for us.
         receive(
                 ReceiveBuilder.matchAny(x -> {
                     HubContext<ChatPage> hub = GlobalHost.getHub(ChatHub.class);

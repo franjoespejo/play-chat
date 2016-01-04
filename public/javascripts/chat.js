@@ -5,6 +5,9 @@ $(function() {
     $('#alert').hide();
     var hub = $.connection.chatHub;
 
+
+// Here the functions to receive the changes from the server
+
     hub.client.sendMessage = function(username, message) {
         var el = $('<div class="message"><span></span><p></p></div>');
         $("span", el).text(username + ': ');
@@ -45,6 +48,9 @@ $(function() {
         $(el).addClass("join");
         $('#messages').append(el);
     };
+
+
+// Here the functions which send information to the server 
 
     $.connection.hub.start().done(function () {
         $('#home').click(function() {

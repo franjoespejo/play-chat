@@ -1,46 +1,41 @@
 package hubs;
 
-import actors.Robot;
 import akka.actor.ActorRef;
 import akka.actor.Props;
 import play.Logger;
 import play.libs.Akka;
 import scala.concurrent.duration.Duration;
 import signalJ.services.Hub;
-
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class ChatHub extends Hub<ChatPage> {
+	//Users is a Map key-> rooms value-> users
     private final static Map<String, Set<String>> users = new HashMap<>();
+    //ConnectionsToUseernames makes a relation between the socketui and the logged username 
     private final static Map<UUID, String> connectionsToUsernames = new HashMap<>();
-    private static ActorRef robot;
+    // auth will be true if the client socket is authenticated or not (invitado)
     private static boolean auth=false;
 
     public boolean login(String username) {
     	if(username.equals("invitado")){
-            System.out.println("invitado");
-           System.out.println(context().connectionId);
-           username=context().connectionId.toString();
-           clients().callerState.put("username", username);
-           
-           joinRoom("Room1");
-           joinRoom("Room2");
-           clients().caller.roomList(getRoomList());
-           connectionsToUsernames.putIfAbsent(context().connectionId, clients().callerState.get("username"));
-           
+    		username=context().connectionId.toString();
+    		clients().callerState.put("username", username);
+    		joinRoom("Room1");
+    		joinRoom("Room2");
+    		clients().caller.roomList(getRoomList());
+    		connectionsToUsernames.putIfAbsent(context().connectionId, clients().callerState.get("username"));
     		return true;
     	}else{
-        if(connectionsToUsernames.containsValue(username) || username.equals("Robot")) return false;
-        auth=true;
-        clients().callerState.put("username", username);
-        joinRoom("Room1");
-        joinRoom("Room2");
-        clients().caller.roomList(getRoomList());
-        connectionsToUsernames.putIfAbsent(context().connectionId, clients().callerState.get("username"));
-        
-        return true;
-    }
+    		if(connectionsToUsernames.containsValue(username) || username.equals("Robot")) return false;
+    		auth=true;
+    		clients().callerState.put("username", username);
+    		joinRoom("Room1");
+    		joinRoom("Room2");
+    		clients().caller.roomList(getRoomList());
+    		connectionsToUsernames.putIfAbsent(context().connectionId, clients().callerState.get("username"));
+    		return true;
+    	}
     }
 
     public void logout() {
@@ -56,7 +51,7 @@ public class ChatHub extends Hub<ChatPage> {
         clients().group(room).userList(getUserList(room));
     }
 
-    public void createRoom(String room) {
+    private void createRoom(String room) {
         users.putIfAbsent(room, new HashSet<>());
         joinRoom(room, true);
     }
@@ -69,7 +64,7 @@ public class ChatHub extends Hub<ChatPage> {
     	}
     }
 
-    private void joinRoom(String room, boolean fromCreate) {
+    public void joinRoom(String room, boolean fromCreate) {
         boolean changed = removeUserFromRoom(clients().callerState.get("username"));
         addUserToRoom(clients().callerState.get("username"), room);
         if(fromCreate || changed) clients().all.roomList(getRoomList());
@@ -103,7 +98,6 @@ public class ChatHub extends Hub<ChatPage> {
 
     private Set<String> getUserList(String room) {
         final Set<String> userlist = new HashSet<>(users.get(room));
-        userlist.add("Robot");
         return userlist;
     }
 
@@ -125,16 +119,6 @@ public class ChatHub extends Hub<ChatPage> {
 
     @Override
     public void onConnected() {
-        /*if(robot == null) {
-            robot = Akka.system().actorOf(Props.create(Robot.class), "robot");
-            Akka.system().scheduler().schedule(
-                    Duration.create(5, TimeUnit.SECONDS),
-                    Duration.create(30, TimeUnit.SECONDS),
-                    robot,
-                    "tick",
-                    Akka.system().dispatcher(),
-                    ActorRef.noSender()
-            );
-        }*/
+       // If it is needed to trigger something when a new socket is connected.
     }
 }

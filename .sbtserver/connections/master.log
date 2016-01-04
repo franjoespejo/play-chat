@@ -1,13 +1,34 @@
-New log file opened at Wed Dec 30 18:25:18 CET 2015 by 6437@ubuntu
-Taking next connection to: 41532
-New client attempting to connect on port: 37548-41532
-  Address = /127.0.1.1:41532
-This client on port 37548 has uuid fd579adf-761f-4c79-aaf8-36e3db121540 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-fd579adf-761f-4c79-aaf8-36e3db121540
-Taking next connection to: 41532
+New log file opened at Mon Jan 04 17:04:23 CET 2016 by 10475@ubuntu
+Taking next connection to: 56128
+New client attempting to connect on port: 58892-56128
+  Address = /127.0.1.1:56128
+This client on port 58892 has uuid 12275c35-fa00-408b-859f-7c229d65150f configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-12275c35-fa00-408b-859f-7c229d65150f
+Taking next connection to: 56128
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 41532
+Taking next connection to: 56128
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 41532
+Taking next connection to: 56128
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 56128
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 56128
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 56128
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 56128
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 56128
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 56128
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 56128

@@ -1,5 +1,5 @@
-New log file opened at Wed Dec 30 18:22:03 CET 2015 by 6245@ubuntu
-jvm 6245@ubuntu
+New log file opened at Mon Jan 04 17:00:52 CET 2016 by 10270@ubuntu
+jvm 10270@ubuntu
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.66-b17
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in /home/user/signalj-chat-java/project, returning: (signalj-chat-java-build)
 Loading project definition from /home/user/signalj-chat-java/project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@14e79af9, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@4bd9af59, check cycles: false
 [info] Updating {file:/home/user/signalj-chat-java/project/}signalj-chat-java-build...
 Updating {file:/home/user/signalj-chat-java/project/}signalj-chat-java-build...
 Other repositories:
@@ -13562,7 +13562,7 @@ sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8-M3!apply-macro.jar
 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-:: resolution report :: resolve 10846ms :: artifacts dl 185ms
+:: resolution report :: resolve 13198ms :: artifacts dl 679ms
 	report for default#signalj-chat-java-build;0.1-SNAPSHOT compile produced in /home/user/signalj-chat-java/project/target/resolution-cache/reports/default-signalj-chat-java-build-compile.xml
 	report for default#signalj-chat-java-build;0.1-SNAPSHOT runtime produced in /home/user/signalj-chat-java/project/target/resolution-cache/reports/default-signalj-chat-java-build-runtime.xml
 	report for default#signalj-chat-java-build;0.1-SNAPSHOT test produced in /home/user/signalj-chat-java/project/target/resolution-cache/reports/default-signalj-chat-java-build-test.xml
@@ -13576,7 +13576,7 @@ sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 	report for default#signalj-chat-java-build;0.1-SNAPSHOT docs produced in /home/user/signalj-chat-java/project/target/resolution-cache/reports/default-signalj-chat-java-build-docs.xml
 	report for default#signalj-chat-java-build;0.1-SNAPSHOT pom produced in /home/user/signalj-chat-java/project/target/resolution-cache/reports/default-signalj-chat-java-build-pom.xml
 	report for default#signalj-chat-java-build;0.1-SNAPSHOT scala-tool produced in /home/user/signalj-chat-java/project/target/resolution-cache/reports/default-signalj-chat-java-build-scala-tool.xml
-	resolve done (10846ms resolve - 185ms download)
+	resolve done (13198ms resolve - 679ms download)
 [info] Done updating.
 Done updating.
 [warn] There may be incompatibilities among your library dependencies.
@@ -13628,7 +13628,7 @@ Set current project to signalj-chat-java (in build file:/home/user/signalj-chat-
 > server-handle-next-server-request
 > {file:/home/user/signalj-chat-java/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@2d88ada8, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@20cac354, check cycles: false
 Read from stdout: Updating {file:/home/user/signalj-chat-java/}root...
 Updating {file:/home/user/signalj-chat-java/}root...
 Other repositories:
@@ -13643,7 +13643,7 @@ resolving dependencies for configuration 'compile'
 == resolving dependencies signalj-chat-java#signalj-chat-java_2.11;1.0->org.scala-lang#scala-library;2.11.1 [compile->default(compile)]
 Read from stdout: Resolving org.scala-lang#scala-library;2.11.1 ...
 Resolving org.scala-lang#scala-library;2.11.1 ...
-sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@287dcf3d
+sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2bdd42b2
 sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.1
 	found org.scala-lang#scala-library;2.11.1 in sbt-chain
 	[2.11.1] org.scala-lang#scala-library;2.11.1
@@ -24438,7 +24438,7 @@ all callers are evicted for commons-logging#commons-logging;1.1.1: evicting too
 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.3.8!akka-testkit_2.11.jar
 	[NOT REQUIRED] org.aspectj#aspectjweaver;1.7.3!aspectjweaver.jar
 	[NOT REQUIRED] com.typesafe.trace#trace-sigar-libs;0.1.6!trace-sigar-libs.jar
-:: resolution report :: resolve 6357ms :: artifacts dl 113ms
+:: resolution report :: resolve 11379ms :: artifacts dl 113ms
 	report for signalj-chat-java#signalj-chat-java_2.11;1.0 compile produced in /home/user/signalj-chat-java/target/resolution-cache/reports/signalj-chat-java-signalj-chat-java_2.11-compile.xml
 	report for signalj-chat-java#signalj-chat-java_2.11;1.0 runtime produced in /home/user/signalj-chat-java/target/resolution-cache/reports/signalj-chat-java-signalj-chat-java_2.11-runtime.xml
 	report for signalj-chat-java#signalj-chat-java_2.11;1.0 test produced in /home/user/signalj-chat-java/target/resolution-cache/reports/signalj-chat-java-signalj-chat-java_2.11-test.xml
@@ -24457,7 +24457,7 @@ all callers are evicted for commons-logging#commons-logging;1.1.1: evicting too
 	report for signalj-chat-java#signalj-chat-java_2.11;1.0 echo-trace-test produced in /home/user/signalj-chat-java/target/resolution-cache/reports/signalj-chat-java-signalj-chat-java_2.11-echo-trace-test.xml
 	report for signalj-chat-java#signalj-chat-java_2.11;1.0 echo-weave produced in /home/user/signalj-chat-java/target/resolution-cache/reports/signalj-chat-java-signalj-chat-java_2.11-echo-weave.xml
 	report for signalj-chat-java#signalj-chat-java_2.11;1.0 echo-sigar produced in /home/user/signalj-chat-java/target/resolution-cache/reports/signalj-chat-java-signalj-chat-java_2.11-echo-sigar.xml
-	resolve done (6357ms resolve - 113ms download)
+	resolve done (11379ms resolve - 113ms download)
 Read from stdout: Done updating.
 Done updating.
 Read from stdout: There may be incompatibilities among your library dependencies.
@@ -24468,51 +24468,13 @@ Read from stdout: 	* org.webjars:jquery:1.11.1 -> 2.1.1
 	* org.webjars:jquery:1.11.1 -> 2.1.1
 Read from stdout: Run 'evicted' to see detailed eviction warnings
 Run 'evicted' to see detailed eviction warnings
-Total time: 7 s, completed Dec 30, 2015 6:22:31 PM
+Total time: 17 s, completed Jan 4, 2016 5:01:55 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@637f5c50, check cycles: false
-Total time: 0 s, completed Dec 30, 2015 6:22:33 PM
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/home/user/signalj-chat-java/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@57c96158, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(/home/user/signalj-chat-java/app/hubs/ChatHub.java)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(/home/user/signalj-chat-java/app/hubs/ChatHub.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(/home/user/signalj-chat-java/app/hubs/ChatHub.java)
-
-Read from stdout: Compiling 1 Java source to /home/user/signalj-chat-java/target/scala-2.11/classes...
-Compiling 1 Java source to /home/user/signalj-chat-java/target/scala-2.11/classes...
-Attempting to call com.sun.tools.javac.api.JavacTool@59c547fc directly...
-Java compilation took 2.415370856 s
-Java analysis took 0.069430763 s
-Java compile + analysis took 2.504350966 s
-New invalidations:
-	Set()
-Initial set of included nodes: Set()
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Copy resource mappings: 
-	(/home/user/signalj-chat-java/conf/play.plugins,/home/user/signalj-chat-java/target/scala-2.11/classes/play.plugins)
-	(/home/user/signalj-chat-java/conf/application.conf,/home/user/signalj-chat-java/target/scala-2.11/classes/application.conf)
-	(/home/user/signalj-chat-java/conf/routes,/home/user/signalj-chat-java/target/scala-2.11/classes/routes)
-Total time: 5 s, completed Dec 30, 2015 6:22:49 PM
+Running task... Cancel: sbt.server.ServerTaskCancellation@55803963, check cycles: false
+Total time: 0 s, completed Jan 4, 2016 5:02:22 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
@@ -24521,4 +24483,4 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 6245@ubuntu logs at Wed Dec 30 18:25:08 CET 2015, goodbye.
+Closing the 10270@ubuntu logs at Mon Jan 04 17:04:08 CET 2016, goodbye.
