@@ -1,3 +1,76 @@
 Java Websocket chat POC
 ===================================
 
+
+## Introduction
+
+This project is a real-time and highly scalable chat solution which is using Play Framework-java and others.
+
+Thanks to Play Framework, it built on Akka, and using a not-bocking IO, which facilitates the communication for Real-time purposes. Since Play Framework is using Java, you will need the JVM, furthermore JRE for development.
+
+It is absolutely following the principles of SOA, therefore there is an complete ubound between client and server. This offers the flexibility to use the services from other clients behind the web, if desired.
+
+You can use the system as:
+- Invitado, this is the guest mode
+- Usuario, this is the authentified mode- you will see your name in the room user's list
+
+Channels-chat releases two channels to chat.
+
+- Canal1 , it is a name of a channel, which will not let you to publish until you are sucesfully authentified
+- Canal2, you can subscribe and publish in this channel without restrictions
+
+
+## Installation
+
+You must be in a linux machine with apt-get packet management system. 
+I assume:
+- You have set-up your permisions for the system/folder you are working in
+- You have a JDK 1.8-or later- installed
+- Activator sucessfully installed
+
+Setup the socketcluster command:
+```bash
+activator app-name play-java
+```
+
+
+Now, just get the code
+```bash
+git clone git@github.com:franjoespejo/play-chat.git
+```
+
+It's all
+
+## Use
+
+Once in the folder: 
+
+```bash
+activator run
+```
+
+### Access at URL http://localhost:9000/
+You will see a nice web.
+In the top there is a selector for switching between Channels.
+
+
+
+## Thanks to:
+
+[![Play logo](https://playframework.com/assets/images/logos/play_full_color.png)](https://playframework.com/)
+
+
+## License
+@author is @franjoespejo, franjoespejo@gmail.com
+
+(The MIT License)
+
+Copyright (c) 2015 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
